@@ -3,31 +3,23 @@
 
 <head>
     <title>
-        Registration Page
+        Registration
     </title>
-    <h1 align="center">
-        Registration Page
+    <h1 align="left">
+        Registration
     </h1>
 </head>
 
 <body>
     <form>
-        <a href="#" onclick="showData()"> Registered user's</a>
-        <a href="#" onclick="showData()"> Registration</a>
+        <a href="#" onclick="showData()"> Register</a> <br>
+        <a href="#" onclick="showData()"> Registered Users</a> 
+
         <br>
         <br>
         <label id="regStatus" color = "red" style="display:none"> REGISTRATION SUCCESSFUL!!!!!! </label>
         <div id="regForm" style="display:none">
             <table border="1">
-                <tr>
-                    <td>
-                        <label> Photo: </label>
-                    </td>
-                    <td>
-                        <label for="myfile"> Select an image: </label>
-                        <input type="file" id="photo" name="photo">
-                    </td>
-                </tr>
                 <tr>
                     <td>
                         <label> First Name: </label>
@@ -78,28 +70,7 @@
                             <option value="default">---Select---</option>
                             <option value="india">India</option>
                             <option value="usa">USA</option>
-                            <option value="australia">Australia</option>
-                            <option value="canada">Canada</option>
-                            <option value="mexico">Mexico</option>
-                            <option value="singapore">Singapore</option>
                         </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label> Phone: </label>
-                    </td>
-                    <td>
-                        <input type="text" name="country code" value="+" size="2" />
-                        <input type="text" name="phone" size="10" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label> Email: </label>
-                    </td>
-                    <td>
-                        <input type="email" id="email" name="email" />
                     </td>
                 </tr>
                 <tr>
@@ -129,6 +100,15 @@
                         <input type="checkbox" name="javaScript" /> JavaScript <br>
                         <input type="checkbox" name="react" /> React <br>
                         <input type="checkbox" name="angularJS" /> AngularJS
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label> Photo: </label>
+                    </td>
+                    <td>
+                        <label for="myfile"> Select an image: </label>
+                        <input type="file" id="photo" name="photo">
                     </td>
                 </tr>
             </table>
