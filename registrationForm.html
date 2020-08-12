@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<Html>
+
+<head>
+    <title>
+        Registration Page
+    </title>
+    <h1 align="center">
+        Registration Page
+    </h1>
+</head>
+
+<body>
+    <form>
+        <a href="#" onclick="showData()"> Registered user's</a>
+        <a href="#" onclick="showData()"> Registration</a>
+        <br>
+        <br>
+        <label id="regStatus" color = "red" style="display:none"> REGISTRATION SUCCESSFUL!!!!!! </label>
+        <div id="regForm" style="display:none">
+            <table border="1">
+                <tr>
+                    <td>
+                        <label> Photo: </label>
+                    </td>
+                    <td>
+                        <label for="myfile"> Select an image: </label>
+                        <input type="file" id="photo" name="photo">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label> First Name: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="firstname" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label> Middle Name: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="middlename" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><label> Last Name: </label></td>
+                    <td><input type="text" name="lastname" /> <br> <br></td>
+                </tr>
+                <tr>
+                    <td><label> Date Of Birth: </label></td>
+                    <td><input type="date" name="dob" /></td>
+                </tr>
+                <tr>
+                    <td><label> Gender: </label></td>
+                    <td>
+                        <input type="radio" name="gender" checked /> Male
+                        <input type="radio" name="gender" /> Female
+                        <input type="radio" name="gender" /> Other
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label> Address: </label>
+                    </td>
+                    <td>
+                        <textarea cols="80" rows="5" value="address"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label> Country: </label>
+                    </td>
+                    <td>
+                        <select>
+                            <option value="default">---Select---</option>
+                            <option value="india">India</option>
+                            <option value="usa">USA</option>
+                            <option value="australia">Australia</option>
+                            <option value="canada">Canada</option>
+                            <option value="mexico">Mexico</option>
+                            <option value="singapore">Singapore</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label> Phone: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="country code" value="+" size="2" />
+                        <input type="text" name="phone" size="10" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label> Email: </label>
+                    </td>
+                    <td>
+                        <input type="email" id="email" name="email" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label> Password: </label>
+                    </td>
+                    <td>
+                        <input type="Password" id="pass" name="pass">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label> Confirm Password: </label>
+                    </td>
+                    <td>
+                        <input type="Password" id="repass" name="repass">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label> Intrested Tech Stack: </label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="java" /> Java <br>
+                        <input type="checkbox" name="python" /> Python <br>
+                        <input type="checkbox" name="php" /> PHP <br>
+                        <input type="checkbox" name="javaScript" /> JavaScript <br>
+                        <input type="checkbox" name="react" /> React <br>
+                        <input type="checkbox" name="angularJS" /> AngularJS
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <input type="button" onclick = "register()" value="Register" />
+        </div>
+        <div id = "data" style="display:none">
+            <table border="1">
+                <td>
+                    <tr>
+                        <td>Photo</td>
+                        <td>Name</td>
+                        <td>DOB</td>
+                        <td>Gender</td>
+                        <td>Address</td>
+                        <td>Country</td>
+                        <td>Interested Tech Stack</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg" width="30" height="30"/></td>
+                        <td>Albert</td>
+                        <td>17/01/1980</td>
+                        <td>Male</td>
+                        <td></td>
+                        <td>USA</td>
+                        <td>JavaScript,React</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg" width="30" height="30"/></td>
+                        <td>Kalam</td>
+                        <td>17/01/1990</td>
+                        <td>Male</td>
+                        <td></td>
+                        <td>India</td>
+                        <td>Python,PHP</td>
+                    </tr>
+                </td>
+            </table>
+        </div>
+    </form>
+
+    <script>
+        function showForm() {
+            var x = document.getElementById("regForm");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function register() {
+            var y = document.getElementById("regStatus");
+            if (y.style.display === "none") {
+                y.style.display = "block";
+            }
+        }
+
+        function showData() {
+            var x = document.getElementById("regForm");
+            var y = document.getElementById("data");
+            if (x.style.display === "none" && y.style.display == "block") {
+                x.style.display = "block";
+                y.style.display = "none";
+            } else {
+                x.style.display = "none";
+                y.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>
